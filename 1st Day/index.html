@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Background Color Project</title>
+    <style>
+      .icon {
+        border: 1px solid;
+        height: 300px;
+        width: 300px;
+        margin-left: 600px;
+        margin-top: 300px;
+        background-color: green;
+      }
+      .margin {
+        margin-top: 130px;
+        margin-left: 100px;
+        padding: 10px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="icon" id="div">
+      <button class="margin" id="button">Click Me</button>
+    </div>
+
+    <script>
+      //color Define
+      const colors = ["red", "green", "blue", "yellow", "pink", "purple"];
+      // Call Element;
+      let touch = document.getElementById("button");
+      let div = document.getElementById("div");
+      touch.addEventListener("click", function () {
+        const colorIndex = parseInt(Math.random() * colors.length);
+        div.style.backgroundColor = colors[colorIndex];
+      });
+    </script>
+  </body>
+</html>
